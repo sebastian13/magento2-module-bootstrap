@@ -1,7 +1,7 @@
 var config = {
   paths: {
     'jquery.bootstrap': [
-      'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min',
+      'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min',
       'WeProvide_TwitterBootstrapJs/bootstrap'
     ]
   },
