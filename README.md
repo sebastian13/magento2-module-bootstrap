@@ -1,27 +1,33 @@
-# Magento2 Twitter Bootstrap Javascript
+# Magento2 Bootstrap Library
 
-Add Twitter Bootstrap javascript from CDN as a require.js module shim. With fallback to local version when CDN is offline.
+![bootstrap version](https://img.shields.io/badge/bootstrap-v4.3.1-blue.svg)
+![packagist version](https://img.shields.io/packagist/v/sebastian13/magento2-module-bootstrap.svg)
+
+Add Twitter Bootstrap library's javascript bundle and CSS from CDN. There's also a fallback when CDN is offline.
 
 ## Installation
 
-1. `composer require weprovide/magento2-module-twitterbootstrap-js`  
-will install the latest version. If you want a specific Twitter Bootstrap version you can use this:  
-`composer require timneutkens/magento2-module-twitterbootstrap-js:<version here>`
+1. Composer:
 
-2. Run `bin/magento setup:upgrade`
+ ```bash
+composer require sebastian13/magento2-module-bootstrap "4.3.1.*" --no-update
+composer update
+```
 
-3. Run `bin/magento setup:static-content:deploy`
+2. Setup Magento
 
-### Available versions
-
-- 3.3.7
+ ```bash
+php bin/magento module:enable Sebastian13_Bootstrap
+php bin/magento setup:upgrade
+php bin/magento setup:static-content:deploy
+```
 
 ## Usage
 
-For usage examples see the [Twitter Bootstrap website](http://getbootstrap.com/javascript/)
+Put this snippet into a Magento Theme in `Magento_Theme/template/html/header.phtml`
 
 ```javascript
-require(['jquery', 'jquery.bootstrap'], function ($) {
-  $('.element').carousel()
-});
+<script type="text/javascript">
+   require(['jquery.bootstrap']);
+</script>
 ```
